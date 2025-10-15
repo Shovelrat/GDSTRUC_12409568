@@ -47,23 +47,26 @@ public class PlayerLinkedList {
 
     //linked lists don't contain true indexes. This mimics an index by counting each address, and ending at a particular one.
     //codeblock present for analysis
-    public void indexOf(Player player){
+    public int indexOf(Player player){
         PlayerNode current = head;
         int index = 0;
-        while (current != PlayerNode.getPlayer()){
+        while (current != null){
+            if(current.getPlayer().equals(player)){
+            return index;
+            }
             index++;
             current = current.getNext();
-        }
-        System.out.print("Index of Saitama" + index);
-    }
 
+        }
+        return -1;
+    }
     // returns true if it contains a certain name
     // Can't figure out how ot make it get its name though... this code block is present for analysis.
-    public void contains(){
+    public void contains(Player player){
         PlayerNode current = head;
         boolean containsItem = false;
         while (current!=null){
-            if (Player.getName() == "Saitama"){
+            if (current.getPlayer().equals(player)){
                 containsItem = true;
                 System.out.println(containsItem);
                 break;

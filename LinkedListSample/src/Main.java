@@ -21,11 +21,11 @@ public class Main {
         System.out.println("\n\nCount Elements:");
         playerList.size();
 
-        System.out.println("\n\nIs Saitama in list?");
-        playerList.contains();
+        System.out.println("\n\nIs Sakamoto in list?");
+        playerList.contains(new Player(4, "Sakamoto", 10));
 
         System.out.println("\n\nWhat index is Saitama?");
-        playerList.indexOf(new Player(3, "Deku", 100))
+        System.out.println(playerList.indexOf(new Player(1, "Saitama", 999)));
 
 
 
