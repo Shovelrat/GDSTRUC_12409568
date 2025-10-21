@@ -20,7 +20,6 @@ public class ArrayQueue {
             front = 0;
             back = size();
         }
-
         queue[back++] = player;
     }
 
@@ -55,6 +54,10 @@ public class ArrayQueue {
     }
 
     public void printQueue() {
+        // checker for if its empty. If it's empty, print out 'QUEUE EMPTY'
+        if (size() == 0){
+            System.out.println("QUEUE EMPTY!");
+        }
         for (int i = front; i < back; i++) {
             System.out.println(queue[i]);
         }
