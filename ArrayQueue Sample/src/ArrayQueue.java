@@ -17,8 +17,9 @@ public class ArrayQueue {
             Player[] newQueue = new Player[queue.length * 2];
             System.arraycopy(queue, front, newQueue, 0, size());
             queue = newQueue;
-            front = 0;
             back = size();
+            front = 0;
+
         }
         queue[back++] = player;
     }

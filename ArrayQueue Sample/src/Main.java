@@ -19,7 +19,7 @@ public class Main {
         int match = 0;
 
         //InitialQueue List. SMALL NOTE - if the queueCount exceeds capacity, begins to print null. For this reason, Capacity is set quite high.
-        ArrayQueue playerQueue = new ArrayQueue(200);
+        ArrayQueue playerQueue = new ArrayQueue(20);
         playerQueue.enqueue(new Player("Player 1"));
         playerQueue.enqueue(new Player("Player 2"));
         playerQueue.enqueue(new Player("Player 3"));
@@ -41,7 +41,7 @@ public class Main {
             // Slightly cheats by printing out the added player as Player + queueCount, but trying to do AddedPlayer returns null.
             for(int i = 0; i < queueAmount; i++){
                 playerQueue.enqueue(new Player("Player " + queueCount));
-                System.out.println("Added Player: Player" + queueCount + "\n");
+                System.out.println("Added Player: Player " + queueCount + "\n");
                 queueCount++;
             }
 
